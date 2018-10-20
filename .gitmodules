@@ -1,0 +1,3 @@
+[submodule "app_educ-rest"]
+	path = app_educ-rest
+	url = git://github.com/fgarioli/app_educ-rest.git
