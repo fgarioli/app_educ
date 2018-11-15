@@ -40,7 +40,18 @@
 			"name": "Refresh Token",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5NTMwMzgzMTAwMCIsImV4cCI6MTU0MTE5ODgwMH0.hlpNBlNWkrUmV3bYrzJA62eqyhRVCoW4WThrjpInsLUNNJinW-c8fK1gdR4D517WA6cycqI4wxvtGWe-LijyBQ",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -56,6 +67,63 @@
 						"app_educ-rest",
 						"auth",
 						"refresh_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar TurmAlun por Responsável e Ano Letivo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5NTMwMzgzMTAwMCIsImV4cCI6MTU0MjMwNjEzOH0.5OESmttJUk7_86v9RV8TzAnk1oOMKwLPNGUCLjSwceg-i262eFHjCER3LdRxPwfNDI_VPx_G6imrIrMNy_OOtQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/app_educ-rest/aluno/1/2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app_educ-rest",
+						"aluno",
+						"1",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Grade Horária por TurmAlun",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/app_educ-rest/grade/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app_educ-rest",
+						"grade",
+						"1"
 					]
 				}
 			},
