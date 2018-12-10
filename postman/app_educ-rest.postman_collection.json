@@ -19,7 +19,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"login\" : \"95303831000\",\n\"senha\" : \"123456\"\n}\n"
+					"raw": "{\n\"login\" : \"teste\",\n\"senha\" : \"123456\"\n}\n"
 				},
 				"url": {
 					"raw": "http://localhost:8080/app_educ-rest/login",
@@ -79,7 +79,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5NTMwMzgzMTAwMCIsImV4cCI6MTU0MjMwNjEzOH0.5OESmttJUk7_86v9RV8TzAnk1oOMKwLPNGUCLjSwceg-i262eFHjCER3LdRxPwfNDI_VPx_G6imrIrMNy_OOtQ",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0Mjg5NDcxMn0.LoVsTDv4cdTD0i7IkTT6exvtZ_VKIjeAp1FwhoRrLZPZ6GlbNKQbU-HvqXk-lw-vXGqH-9zFckSb7Ncd2KFm3A",
 						"type": "text"
 					}
 				],
@@ -88,7 +88,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/app_educ-rest/aluno/1/2018",
+					"raw": "http://localhost:8080/app_educ-rest/resp/1/2018",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -96,7 +96,7 @@
 					"port": "8080",
 					"path": [
 						"app_educ-rest",
-						"aluno",
+						"resp",
 						"1",
 						"2018"
 					]
@@ -108,13 +108,19 @@
 			"name": "Listar Grade Horária por TurmAlun",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0Mjg5NDcxMn0.LoVsTDv4cdTD0i7IkTT6exvtZ_VKIjeAp1FwhoRrLZPZ6GlbNKQbU-HvqXk-lw-vXGqH-9zFckSb7Ncd2KFm3A",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/app_educ-rest/grade/1",
+					"raw": "http://localhost:8080/app_educ-rest/aluno/grade/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -122,7 +128,106 @@
 					"port": "8080",
 					"path": [
 						"app_educ-rest",
+						"aluno",
 						"grade",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Atividades Avaliativas por TurmAlun Trimestre",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NDM3NjAyOX0.DxRLd4vDvAZCjZBWBaXjn4UKvOH_-aIhefflGxtRHVSI8O7l9Ito6jSybGCBRE_tuun9885xZpZjF0QP-Ym5Dw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/app_educ-rest/aluno/ativ/1/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app_educ-rest",
+						"aluno",
+						"ativ",
+						"1",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Notas Trimestrais por Aluno",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NDM3NjUyNn0.74SSEYMEz7BuLSioUCRPM15iBL00XqutTsMbz8AsekZvpwrf7lh3E377ofqOcMdxHwXJwWKbnq6kbxxr94DIOw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/app_educ-rest/aluno/boletim/1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app_educ-rest",
+						"aluno",
+						"boletim",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Frequências por Aluno",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NDQwMjE4Nn0.czwqS1nK5pA4zulW90Ww5m01a22egCTQGAnH5EjQba1e7hBqUlTPxH7b1FQvGJk7hNGKtTRVqq_bZMup0nw8Jg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/app_educ-rest/aluno/freq/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app_educ-rest",
+						"aluno",
+						"freq",
 						"1"
 					]
 				}
