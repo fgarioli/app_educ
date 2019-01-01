@@ -18,8 +18,24 @@
 					}
 				],
 				"body": {
-					"mode": "raw",
-					"raw": "{\n\"login\" : \"teste\",\n\"senha\" : \"123456\"\n}\n"
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "teste",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "access_token",
+							"type": "text"
+						}
+					]
 				},
 				"url": {
 					"raw": "http://localhost:8080/app_educ-rest/login",
@@ -43,7 +59,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
 						"type": "text"
 					},
 					{
@@ -53,8 +70,14 @@
 					}
 				],
 				"body": {
-					"mode": "raw",
-					"raw": ""
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						}
+					]
 				},
 				"url": {
 					"raw": "http://localhost:8080/app_educ-rest/auth/refresh_token",
@@ -111,7 +134,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0Mjg5NDcxMn0.LoVsTDv4cdTD0i7IkTT6exvtZ_VKIjeAp1FwhoRrLZPZ6GlbNKQbU-HvqXk-lw-vXGqH-9zFckSb7Ncd2KFm3A",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NjA0MjgyM30.6UguMXiBHjyNzfuUtcLP8bpG5JuTKdRHkZSpD85WPX-ltcsXL9FAIfNd63wJaAcJZQvlQOzBU8qITPiBZ5s6og",
 						"type": "text"
 					}
 				],
@@ -143,7 +166,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NDM3NjAyOX0.DxRLd4vDvAZCjZBWBaXjn4UKvOH_-aIhefflGxtRHVSI8O7l9Ito6jSybGCBRE_tuun9885xZpZjF0QP-Ym5Dw",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NjA0MjgyM30.6UguMXiBHjyNzfuUtcLP8bpG5JuTKdRHkZSpD85WPX-ltcsXL9FAIfNd63wJaAcJZQvlQOzBU8qITPiBZ5s6og",
 						"type": "text"
 					}
 				],
@@ -176,7 +199,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NDM3NjUyNn0.74SSEYMEz7BuLSioUCRPM15iBL00XqutTsMbz8AsekZvpwrf7lh3E377ofqOcMdxHwXJwWKbnq6kbxxr94DIOw",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NjA0MjgyM30.6UguMXiBHjyNzfuUtcLP8bpG5JuTKdRHkZSpD85WPX-ltcsXL9FAIfNd63wJaAcJZQvlQOzBU8qITPiBZ5s6og",
 						"type": "text"
 					}
 				],
@@ -209,7 +232,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NDQwMjE4Nn0.czwqS1nK5pA4zulW90Ww5m01a22egCTQGAnH5EjQba1e7hBqUlTPxH7b1FQvGJk7hNGKtTRVqq_bZMup0nw8Jg",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NjA0MjcwMn0.LOHXZLZQNdTKJoe36J_2x7zETIKXrX_0DIIqDbyRerQtAQHeJBYaTCSVEHBrs8DXuanSlpw-Xrixx-4JB1KvwQ",
 						"type": "text"
 					}
 				],
@@ -228,6 +251,63 @@
 						"app_educ-rest",
 						"aluno",
 						"freq",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Calendário por Ano Letivo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/app_educ-rest/cale/2019",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app_educ-rest",
+						"cale",
+						"2019"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Mensagens por Usuário",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0ZSIsImV4cCI6MTU0NjA0MjgyM30.6UguMXiBHjyNzfuUtcLP8bpG5JuTKdRHkZSpD85WPX-ltcsXL9FAIfNd63wJaAcJZQvlQOzBU8qITPiBZ5s6og",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/app_educ-rest/usuario/msg/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app_educ-rest",
+						"usuario",
+						"msg",
 						"1"
 					]
 				}

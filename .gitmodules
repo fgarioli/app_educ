@@ -1,3 +1,6 @@
 [submodule "app_educ-rest"]
 	path = app_educ-rest
 	url = git://github.com/fgarioli/app_educ-rest.git
+[submodule "app_educ-ionic"]
+	path = app_educ-ionic
+	url = git://github.com/fgarioli/app_educ-ionic.git
